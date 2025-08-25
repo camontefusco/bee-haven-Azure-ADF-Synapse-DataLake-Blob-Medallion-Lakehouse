@@ -30,12 +30,15 @@ Each layer improves data quality and prepares it for advanced insights.
 
 ---
 
-## 📊 Datasets
-- `flow_schwartau.csv` – hive airflow  
-- `humidity_schwartau.csv` – humidity readings  
-- `temperature_schwartau.csv` – hive temperature  
-- `weight_schwartau.csv` – hive weight  
+## 📊 Datasets  
 - `api_weather_sample.json` – enriched weather data  
+
+The other datasets are hosted on Google Drive. You can download them using the links below:
+
+- [`flow_schwartau.csv`](https://drive.google.com/uc?export=download&id=1FweDbuD-TylQ-AtRyzwa9mKm6nwDtSFN) – hive airflow  
+- [`humidity_schwartau.csv`](https://drive.google.com/uc?export=download&id=1c2uEiAgX0TFhL3vW7C2TRNz3yUprnL4N) – humidity readings  
+- [`temperature_schwartau.csv`](https://drive.google.com/uc?export=download&id=1SjH1W6qCAnCDHGnjmT78fXUru015I0kQ) – hive temperature  
+- [`weight_schwartau.csv`](https://drive.google.com/uc?export=download&id=1fMFjUSeb-qaHMMfiIfBMl8NG81EJAotp) – hive weight
 
 ---
 
