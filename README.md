@@ -90,9 +90,7 @@ Pipeline JSON exports: [`pipelines/`](pipelines/)
 bee-haven-azure-medallion-lakehouse/
 ├── README.md
 ├── data/
-│ ├── raw/
-│ └── api_weather_sample.json
-│ └── notebooks/
+├── notebooks/
 ├── pipelines/
 ├── screenshots/
 ├── architecture/
