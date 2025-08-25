@@ -1,0 +1,65 @@
+{
+    "name": "daily-processing",
+    "properties": {
+        "activities": [
+            {
+                "name": "Bronzetosilver",
+                "type": "ExecutePipeline",
+                "dependsOn": [],
+                "policy": {
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "pipeline": {
+                        "referenceName": "Bronzetosilver",
+                        "type": "PipelineReference"
+                    },
+                    "waitOnCompletion": true
+                }
+            },
+            {
+                "name": "SilvertoGold",
+                "type": "ExecutePipeline",
+                "dependsOn": [
+                    {
+                        "activity": "Wait5Minutes",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "policy": {
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "pipeline": {
+                        "referenceName": "SilvertoGold",
+                        "type": "PipelineReference"
+                    },
+                    "waitOnCompletion": true
+                }
+            },
+            {
+                "name": "Wait5Minutes",
+                "type": "Wait",
+                "dependsOn": [
+                    {
+                        "activity": "Bronzetosilver",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "userProperties": [],
+                "typeProperties": {
+                    "waitTimeInSeconds": 300
+                }
+            }
+        ],
+        "annotations": [],
+        "lastPublishTime": "2025-08-19T21:25:03Z"
+    },
+    "type": "Microsoft.DataFactory/factories/pipelines"
+}
