@@ -26,7 +26,7 @@ This project follows the **medallion lakehouse pattern**:
 - **Gold**: curated, analytics-ready outputs  
 
 Each layer improves data quality and prepares it for advanced insights.  
-([Microsoft reference](https://learn.microsoft.com/en-us/azure/databricks/lakehouse/medallion)
+([Microsoft reference](https://learn.microsoft.com/en-us/azure/databricks/lakehouse/medallion))
 
 ---
 
@@ -56,7 +56,7 @@ Each layer improves data quality and prepares it for advanced insights.
 📖 Full details: [`architecture/azure_resources.md`](architecture/azure_resources.md)
 
 📷 **Medallion Overview**  
-![Medallion Architecture](screenshots/medallion_architecture.png)
+![Medallion Architecture](https://github.com/camontefusco/bee-haven-Azure-ADF-Synapse-DataLake-Blob-Medallion-Lakehouse/blob/a736b2a4daaddbf1fd0a4ed7b7932a35b287b816/medallion_architecture.png)
 
 ---
 
@@ -64,15 +64,15 @@ Each layer improves data quality and prepares it for advanced insights.
 - **BronzeToSilver**  
   - Move raw → archive  
   - Clean & enrich via Synapse notebook  
-![BronzeToSilver Pipeline](screenshots/Pipeline_BronzeToSilver.png)
+![BronzeToSilver Pipeline](https://github.com/camontefusco/bee-haven-Azure-ADF-Synapse-DataLake-Blob-Medallion-Lakehouse/blob/a736b2a4daaddbf1fd0a4ed7b7932a35b287b816/Pipeline_BronzeToSilver.png)
 
 - **SilverToGold**  
   - Transform Silver parquet → curated Gold data  
-![SilverToGold Pipeline](screenshots/Pipeline_SilverToGold.png)
+![SilverToGold Pipeline](https://github.com/camontefusco/bee-haven-Azure-ADF-Synapse-DataLake-Blob-Medallion-Lakehouse/blob/a736b2a4daaddbf1fd0a4ed7b7932a35b287b816/Pipeline_SilverToGold.png)
 
 - **DailyProcessing**  
   - Orchestrates full Bronze → Silver → Gold flow daily 
-![DailyProcessing Pipeline](screenshots/Pipeline_DailyProcessing.png)
+![DailyProcessing Pipeline](https://github.com/camontefusco/bee-haven-Azure-ADF-Synapse-DataLake-Blob-Medallion-Lakehouse/blob/a736b2a4daaddbf1fd0a4ed7b7932a35b287b816/Pipeline_DailyProcessing.png)
 
 
 Pipeline JSON exports: [`pipelines/`](pipelines/)  
