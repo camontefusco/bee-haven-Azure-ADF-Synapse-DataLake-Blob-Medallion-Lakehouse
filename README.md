@@ -8,6 +8,17 @@ The work highlights my **data engineering, data science, and cloud skills** in d
 
 ---
 
+## 📂 Repo Structure
+bee-haven-azure-medallion-lakehouse/
+- **data/** – Contains raw, processed, or external datasets used in the project.  
+- **notebooks/** – Jupyter notebooks for exploration, prototyping, and analysis.  
+- **pipelines/** – Scripts and definitions for ETL or data processing pipelines.  
+- **screenshots/** – Visual references, UI captures, or diagrams.  
+- **architecture/** – Documentation about system design and resources.  
+  - **azure_resources.md** – Specifics about Azure resources, architecture, and setup.
+
+---
+
 ## 🏛️ Medallion Architecture
 This project follows the **medallion lakehouse pattern**:
 - **Bronze**: raw ingestion (CSV + API)  
@@ -15,7 +26,7 @@ This project follows the **medallion lakehouse pattern**:
 - **Gold**: curated, analytics-ready outputs  
 
 Each layer improves data quality and prepares it for advanced insights.  
-([Microsoft reference](https://learn.microsoft.com/en-us/azure/databricks/lakehouse/medallion)
+([Microsoft reference](https://learn.microsoft.com/en-us/azure/databricks/lakehouse/medallion))
 
 ---
 
@@ -45,7 +56,7 @@ Each layer improves data quality and prepares it for advanced insights.
 📖 Full details: [`architecture/azure_resources.md`](architecture/azure_resources.md)
 
 📷 **Medallion Overview**  
-![Medallion Architecture](screenshots/medallion_architecture.png)
+![Medallion Architecture](https://github.com/camontefusco/bee-haven-Azure-ADF-Synapse-DataLake-Blob-Medallion-Lakehouse/blob/a736b2a4daaddbf1fd0a4ed7b7932a35b287b816/medallion_architecture.png)
 
 ---
 
@@ -53,15 +64,15 @@ Each layer improves data quality and prepares it for advanced insights.
 - **BronzeToSilver**  
   - Move raw → archive  
   - Clean & enrich via Synapse notebook  
-![ADF Pipeline](screenshots/Pipeline_BronzeToSilver.png)
+![BronzeToSilver Pipeline](https://github.com/camontefusco/bee-haven-Azure-ADF-Synapse-DataLake-Blob-Medallion-Lakehouse/blob/a736b2a4daaddbf1fd0a4ed7b7932a35b287b816/Pipeline_BronzeToSilver.png)
 
 - **SilverToGold**  
   - Transform Silver parquet → curated Gold data  
-![ADF Pipeline](screenshots/Pipeline_SilverToGold.png)
+![SilverToGold Pipeline](https://github.com/camontefusco/bee-haven-Azure-ADF-Synapse-DataLake-Blob-Medallion-Lakehouse/blob/a736b2a4daaddbf1fd0a4ed7b7932a35b287b816/Pipeline_SilverToGold.png)
 
 - **DailyProcessing**  
   - Orchestrates full Bronze → Silver → Gold flow daily 
-![ADF Pipeline](screenshots/Pipeline_DailyProcessing.png)
+![DailyProcessing Pipeline](https://github.com/camontefusco/bee-haven-Azure-ADF-Synapse-DataLake-Blob-Medallion-Lakehouse/blob/a736b2a4daaddbf1fd0a4ed7b7932a35b287b816/Pipeline_DailyProcessing.png)
 
 
 Pipeline JSON exports: [`pipelines/`](pipelines/)  
@@ -85,18 +96,6 @@ Pipeline JSON exports: [`pipelines/`](pipelines/)
   - Modular, reproducible repo structure  
 
 ---
-
-## 📂 Repo Structure
-bee-haven-azure-medallion-lakehouse/
-├── README.md
-├── data/
-│ ├── raw/
-│ └── api_weather_sample.json
-│ └── notebooks/
-├── pipelines/
-├── screenshots/
-├── architecture/
-│ └──azure_resources.md
 
 ## 📬 Contact
 Carlos Montefusco
