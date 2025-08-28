@@ -13,10 +13,6 @@ The architecture follows a **Lakehouse pattern** with Bronze, Silver, and Gold l
 
 ## 2. Storage
 
-### Azure Blob Storage
-- Holds initial raw data ingested into the environment.
-- Example container: `bee-raw`
-
 ### Azure Data Lake Storage Gen2
 - Core storage for the Lakehouse.
 - Organized into **medallion architecture**:
